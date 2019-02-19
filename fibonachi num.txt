@@ -1,0 +1,39 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int fibnum(int i)
+{
+
+	int a = 1;
+	int b;
+	int c = 0;
+	for (int j = 1; j < i; j++)
+	{
+		b = c + a;
+		c = a;
+		a = b;
+
+	}
+	return c;
+
+}
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	
+	ofstream fout;
+
+	fout.open("output.txt");
+	int n;
+	cout << "¬ведите кол-во чисел фибоначчи" << endl;
+	cin >> n;
+	for (int i = 1; i < n+1; i++)
+	{
+		fout << fibnum(i) << " ";
+	}
+	fout.close();
+
+	system("pause");
+
+}

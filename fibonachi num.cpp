@@ -9,7 +9,23 @@ int main()
     int d = 1;
 	cout << "Введите количество чисел Фибоначчи" << endl;
 	cin >> n;
-	cout << "Числа Фибоначчи:" << endl;
+	if(n==1)
+	{
+	cout << l << endl;
+    } 
+    if(n==2)
+    {
+    cout << l << endl;
+	cout << d << endl;
+    }
+    if(n==3)
+    {
+    cout << l << endl;
+	cout << d << endl;
+	cout<<2<<endl;
+    }
+    else
+	{
 	cout << l << endl;
 	cout << d << endl;
 	while (i <(n-2)/2) {
@@ -19,10 +35,7 @@ int main()
 		l = d + l;
 		cout << l << endl;
 	}
-	if (n & 1) {
-		d = l + d;
-		cout << d << endl;
-	}
+    }
 
 
 
@@ -33,5 +46,5 @@ int main()
 
 
 
-	system("pause");
+	return 0;
 }
